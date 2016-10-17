@@ -1,0 +1,30 @@
+{-- A small testfile for getting used to arrays --}
+
+module ArraysTest where
+
+import Data.Array
+import Data.Functor
+import Data.List
+import Data.Ix
+import Control.Applicative
+import Control.Exception
+import Text.Read
+
+-- clearly separates the lines of a 2D array
+delimiter2D :: String
+delimiter2D =  "\n----------------------\n"
+
+-- creates a 1d array of ints in which the values are the indices' squares
+mkArray :: (Int -> Int) -> (Int, Int) -> Array Int Int
+mkArray fkt bounds = array bounds [(i, fkt i) | i <- range bounds]
+
+-- creates a 2d array with desired bounds
+mkArray2D :: Int -> Int -> Int -> Int -> Array (Int, Int) Int
+mkArray2D r1 r2 c1 c2 = array ((r1,c1), (r2,c2)) [((i, j), 0) | i <- [r1..r2], j <- [c1..c2]]
+
+printArray2D :: Array (Int, Int) Int -> String
+printArray2D array = intercalate delimiter2D [intercalate " | " $ show <$> [array ! (j,i) | i <- [0..5]] | j <- [0..5]] ++ "\n"
+
+-- very simple square function for testing 
+square :: Int -> Int
+square n = n*n
