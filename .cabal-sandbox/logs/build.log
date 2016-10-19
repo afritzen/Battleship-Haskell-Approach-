@@ -8,3 +8,113 @@ dependencies: array-0.4.0.1 base-4.6.0.1
 install-outcome: InstallOk
 docs-outcome: NotTried
 tests-outcome: NotTried
+
+package: Battleship-0.1.0.0
+os: linux
+arch: x86_64
+compiler: ghc-7.6.3
+client: cabal-install-1.24.0.0
+dependencies: array-0.4.0.1 base-4.6.0.1
+install-outcome: BuildFailed
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: Battleship-0.1.0.0
+os: linux
+arch: x86_64
+compiler: ghc-7.6.3
+client: cabal-install-1.24.0.0
+dependencies: array-0.4.0.1 base-4.6.0.1
+install-outcome: BuildFailed
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: Battleship-0.1.0.0
+os: linux
+arch: x86_64
+compiler: ghc-7.6.3
+client: cabal-install-1.24.0.0
+dependencies: array-0.4.0.1 base-4.6.0.1
+install-outcome: BuildFailed
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: Battleship-0.1.0.0
+os: linux
+arch: x86_64
+compiler: ghc-7.6.3
+client: cabal-install-1.24.0.0
+dependencies: array-0.4.0.1 base-4.6.0.1
+install-outcome: BuildFailed
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: Battleship-0.1.0.0
+os: linux
+arch: x86_64
+compiler: ghc-7.6.3
+client: cabal-install-1.24.0.0
+dependencies: array-0.4.0.1 base-4.6.0.1
+install-outcome: BuildFailed
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: Battleship-0.1.0.0
+os: linux
+arch: x86_64
+compiler: ghc-7.6.3
+client: cabal-install-1.24.0.0
+dependencies: array-0.4.0.1 base-4.6.0.1 random-1.0.1.1
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: Battleship-0.1.0.0
+os: linux
+arch: x86_64
+compiler: ghc-7.6.3
+client: cabal-install-1.24.0.0
+dependencies: array-0.4.0.1 base-4.6.0.1 random-1.0.1.1
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: Battleship-0.1.0.0
+os: linux
+arch: x86_64
+compiler: ghc-7.6.3
+client: cabal-install-1.24.0.0
+dependencies: array-0.4.0.1 base-4.6.0.1 random-1.0.1.1
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: Battleship-0.1.0.0
+os: linux
+arch: x86_64
+compiler: ghc-7.6.3
+client: cabal-install-1.24.0.0
+dependencies: array-0.4.0.1 base-4.6.0.1 random-1.0.1.1
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: Battleship-0.1.0.0
+os: linux
+arch: x86_64
+compiler: ghc-7.6.3
+client: cabal-install-1.24.0.0
+dependencies: array-0.4.0.1 base-4.6.0.1 random-1.0.1.1
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried
+
+package: Battleship-0.1.0.0
+os: linux
+arch: x86_64
+compiler: ghc-7.6.3
+client: cabal-install-1.24.0.0
+dependencies: array-0.4.0.1 base-4.6.0.1 random-1.0.1.1
+install-outcome: InstallOk
+docs-outcome: NotTried
+tests-outcome: NotTried

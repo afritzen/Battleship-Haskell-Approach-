@@ -6,7 +6,7 @@ import Data.Array
 import Data.Functor
 import Data.List
 
-data Ship = Active | Defeated | OpponentDefeated | OpponentActive | None deriving (Eq)
+data Ship = Active | Defeated | OpponentDefeated | None deriving (Eq)
 
 -- visualization of a ship, depending on it's state and owner
 instance Show Ship where
