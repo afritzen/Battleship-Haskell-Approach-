@@ -8,6 +8,8 @@ import Data.List
 
 data Ship = Active | Defeated | OpponentDefeated | OpponentActive | None deriving (Eq)
 
+data Turn = Player | Computer deriving (Eq)
+
 -- visualization of a ship, depending on it's state and owner
 instance Show Ship where
 	show Defeated = "x"

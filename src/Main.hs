@@ -16,6 +16,8 @@ main = do
 placeShipsPlayer :: Board -> Int -> IO ()
 placeShipsPlayer board counter  = do
 				putStrLn $ printBoard $ board
+				putStrLn "Player can now place ships.\n"
+				putStrLn "Where do you want to place your ship?\n"
 				pos <- getCoordinates board
 				if alreadyOccupied board pos then
 					putStrLn "This field already holds a ship!\n" >> placeShipsPlayer board counter
@@ -42,24 +44,29 @@ placeShipsComputer board counter = do
 					           putStrLn $ printBoard $ boardNew
 						   if counter == 3 then
 							do putStrLn "Computer placed all ships.\n"
-							   startGame boardNew
+							   putStrLn "First phase completed! Game starting ...\n"
+							   startGame boardNew 4 4 Player
 						   else
 							placeShipsComputer boardNew (counter+ 1)	
 								
 			
 -- TODO
-startGame :: Board -> IO ()
-startGame board = do 
-		putStrLn "First phase completed! Game starting ...\n"
-		putStrLn $ printBoard board
-
+startGame :: Board -> Int -> Int -> Turn -> IO ()
+startGame board myShips oppShips turn = do
+						if turn == Player then
+							do putStrLn "Please take a guess:\n"
+							   playerGuess <- getCoordinates board
+							   putStrLn $ show playerGuess
+						else
+							do putStrLn "Computer takes a guess ...\n"
+	  						   startGame testBoard myShips oppShips $ switchTurn turn	 
+					
 
 {-- ## Helper functions go here ## --}
 
 -- reads the entered coordinates and returns them
 getCoordinates :: Board -> IO Coordinates
 getCoordinates board = do
-			putStrLn "Where do you want to place your ship?"
 			idx <- getLine
 			coords <- case readMaybe idx :: Maybe Coordinates of
 				Just p -> return p
@@ -73,7 +80,23 @@ getCoordinates board = do
 -- determines whether a field on the board already holds a ship
 alreadyOccupied :: Board -> (Int, Int) -> Bool
 alreadyOccupied board coords | board !coords == None = False
-			     | otherwise = True	 
+			     | otherwise = True
+
+-- determines wheter guessed coordinates hold one of the opponent's ships
+hasOpponentShip :: (Int, Int) -> Board -> Bool
+hasOpponentShip coords board | board !coords == OpponentActive = True
+			     | otherwise = False 
+
+-- determines wheter guessed coordinates hold one of the player's ships
+hasPlayerShip :: (Int, Int) -> Board -> Bool
+hasPlayerShip coords board | board !coords == Active = True
+			   | otherwise = False
+
+-- switches turn to either player or computer
+switchTurn :: Turn -> Turn
+switchTurn turn | turn == Player = Computer
+		| otherwise = Player
+
 
 
 
